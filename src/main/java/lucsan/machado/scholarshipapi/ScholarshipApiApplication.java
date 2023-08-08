@@ -1,0 +1,13 @@
+package lucsan.machado.scholarshipapi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ScholarshipApiApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ScholarshipApiApplication.class, args);
+	}
+
+}
