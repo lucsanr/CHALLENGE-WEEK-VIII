@@ -1,7 +1,10 @@
 package lucsan.machado.scholarshipapi.entity;
 
-import jakarta.persistence.*;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Coordinator {
@@ -11,7 +14,6 @@ public class Coordinator {
 
     private String name;
     private String email;
-
     public Long getId() {
         return id;
     }

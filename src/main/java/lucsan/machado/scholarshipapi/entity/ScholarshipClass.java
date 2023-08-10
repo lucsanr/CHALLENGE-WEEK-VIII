@@ -1,16 +1,21 @@
 package lucsan.machado.scholarshipapi.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-public class Class {
+public class ScholarshipClass {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "class")
+    @OneToMany(mappedBy = "scholarshipClass")
     private List<Student> students;
 
     @OneToOne
@@ -22,9 +27,10 @@ public class Class {
     @OneToOne
     private ScrumMaster scrumMaster;
 
-    private String status;
-    private LocalDate startDate;
-    private LocalDate endDate;
+    private String classStatus;
+    private LocalDate classStartDate;
+    private LocalDate classEndDate;
+
 
     public Long getId() {
         return id;
@@ -66,27 +72,27 @@ public class Class {
         this.scrumMaster = scrumMaster;
     }
 
-    public String getStatus() {
-        return status;
+    public String getClassStatus() {
+        return classStatus;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setClassStatus(String classStatus) {
+        this.classStatus = classStatus;
     }
 
-    public LocalDate getStartDate() {
-        return startDate;
+    public LocalDate getClassStartDate() {
+        return classStartDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
+    public void setClassStartDate(LocalDate classStartDate) {
+        this.classStartDate = classStartDate;
     }
 
-    public LocalDate getEndDate() {
-        return endDate;
+    public LocalDate getClassEndDate() {
+        return classEndDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
-        this.endDate = endDate;
+    public void setClassEndDate(LocalDate classEndDate) {
+        this.classEndDate = classEndDate;
     }
 }

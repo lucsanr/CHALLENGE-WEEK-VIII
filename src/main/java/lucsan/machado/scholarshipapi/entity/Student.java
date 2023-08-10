@@ -1,8 +1,13 @@
 package lucsan.machado.scholarshipapi.entity;
 
-
-import jakarta.persistence.*;
-
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import java.util.List;
 
 @Entity
 public class Student {
@@ -12,6 +17,14 @@ public class Student {
 
     private String name;
     private String email;
+
+    @ManyToOne
+    @JoinColumn(name = "class_id")
+    private ScholarshipClass scholarshipClass; // Updated variable name
+
+
+    @ManyToMany(mappedBy = "students")
+    private List<Squad> squads;
 
     public Long getId() {
         return id;
