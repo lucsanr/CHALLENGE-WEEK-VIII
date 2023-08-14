@@ -20,7 +20,16 @@ public class Student {
 
     @ManyToOne
     @JoinColumn(name = "class_id")
-    private ScholarshipClass scholarshipClass; // Updated variable name
+    private ScholarshipClass scholarshipClass;
+
+
+    public Student() {
+
+    }
+
+    public void setScholarshipClass(ScholarshipClass scholarshipClass) {
+        this.scholarshipClass = scholarshipClass;
+    }
 
 
     @ManyToMany(mappedBy = "students")
