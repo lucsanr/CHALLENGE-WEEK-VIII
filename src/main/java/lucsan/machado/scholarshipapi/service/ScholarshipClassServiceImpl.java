@@ -38,7 +38,7 @@ public class ScholarshipClassServiceImpl implements ScholarshipClassService {
         ScholarshipClass existingClass = scholarshipClassRepository.findById(id).orElse(null);
 
         if (existingClass != null) {
-            existingClass.setName(newClass.getName());
+            existingClass.setClassName(newClass.getClassName());
             existingClass.setStatus(newClass.getStatus());
             existingClass.setStartDate(newClass.getStartDate());
             existingClass.setEndDate(newClass.getEndDate());

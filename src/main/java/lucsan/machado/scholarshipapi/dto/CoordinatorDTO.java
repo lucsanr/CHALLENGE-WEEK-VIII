@@ -16,7 +16,7 @@ public class CoordinatorDTO {
         this.email = email;
     }
 
-    // Getters and setters for fields
+
     public Long getId() {
         return id;
     }
