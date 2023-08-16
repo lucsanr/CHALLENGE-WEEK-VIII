@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/scrum-masters")
+@RequestMapping("/api/v1/scrum-masters")
 public class ScrumMasterController {
 
     private final ScrumMasterService scrumMasterService;

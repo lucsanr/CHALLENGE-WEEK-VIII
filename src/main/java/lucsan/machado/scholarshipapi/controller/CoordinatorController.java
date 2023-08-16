@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/coordinators")
+@RequestMapping("/api/v1/coordinators")
 public class CoordinatorController {
 
     private final CoordinatorService coordinatorService;
